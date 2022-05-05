@@ -6,183 +6,149 @@
 
 .container {
     display: flex;
-    flex-flow: row wrap;
-    height: 100vh;
-    width: 100vw;
+    flex-direction: row;
 }
 
 section {
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    background: #FFF;
-    height: 100%;
-    flex-grow: 1;
-    flex-shrink: 4;
-    border-right: 3px solid #EFEFEF;
+    flex: 20%;
+    align-items: center;
+    justify-content: flex-start;
+    border-right: 3px solid #F0F0F0;
 
-    
 }
 
 .userSection {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 4px 0;
-    border-bottom: 3px solid #EFEFEF;
+    width: 100%;
 }
 
 .infoData {
-    display: flex;
-    justify-content: space-between;
-    gap: 1em;
-}
 
-.texts {
+    padding: 5px 0;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    border-bottom: 3px solid #F0F0F0;
     
-   
 }
 
-.texts p {
-    text-align: center;
+.infoData .img {
+    width: 45px;
 }
 
-.userSection .img {
-    width: 4em;
-    object-fit: cover;
-}
-
-.userSection .img img {
-    max-width: 100%;
+.infoData .img img {
+    width: 100%;
     border-radius: 50%;
 }
 
-i {
-    margin: 10px;
+.icons i {
+    padding-right: 15px;
 }
 
 .button {
+    width: 100%;
+    height: 5rem;
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 6em;
-    border-bottom: 3px solid #F8F8F8;
+    justify-content: center;
+    border-bottom: 3px solid #F0F0F0;
 }
 
 .button div {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #A491D3;
+    background-color: #B2A1D9;
     color: #FFF;
-    width: 15vw;
-    height: 3em;
-    transition: .9s;
-    font-size: 1em;
-    text-align: center;
-    
+    height: 30px;
+    width:150px;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 1s;
 }
 
 .button div:hover {
     cursor: pointer;
-    opacity: .6;
-    border: 2px solid #111;
-    font-weight: bold;
+    opacity: .7;
+    border: 1px solid blue;
+}
+
+.chats {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 
 }
 
 .friends {
-    margin-left: 10%;
     display: flex;
-    gap: 30px;
-    border-bottom: 3px solid #EFEFEF;
-    padding: 2px 0;
-    font-size: 100%;
+    gap: 10px;
+    padding: 4px 0;
+    border-bottom: 3px solid #F0F0F0;
+    padding-left: 20px;
+    transition: .5s;
+    
 }
 
-.friends:nth-of-type(8){
-    padding-bottom: 0;
+.friends .img {
+    width: 49px;
+    transition: .7s;
 }
 
-.friends img {
-    width: 3em;
-    object-fit: cover;
+.friends:hover {
+    cursor: pointer;
+    background-color: #111;
+    height: 87px;
 }
 
-.friends img {
-    max-width: 100%;
+.friends:hover > .img{
+    transform: scaleX(1.2) translateX(70px) translateY(10px);
+    position: absolute;
+    z-index: 2;
+    opacity: 1;
+    
+}
+
+
+.friends .img img {
+    width: 100%;
     border-radius: 50%;
 }
 
 .logoSection {
-    height: 100%;
+    flex: 80%;
     display: flex;
-    flex-wrap: nowrap;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    flex-grow: 3;
+    align-items: center;
     background: #F8F8F8;
-    flex-shrink: 1;
-    
-
-
 }
 
-.logoSection img{
-    width: 33vw;
-    
+.logoSection img {
+    width: 23vw;
 }
 
-h2 {
-    margin-top: 3%;
-    font-size: 5vw;
+.text {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text h2 {
+    font-size: 1.5em;
     text-align: center;
 }
 
-.logoSection p {
+.text p {
+    margin-top: 10px;
     text-align: center;
-    font-size: 3vw;
-    margin-top: 2%;
+    font-size: 1em;
 }
 
-.logoSection p span {
-    font-weight: 1000;
+p span {
+    font-weight: bolder;
 }
-
-/* MediaQueries */
-
-@media (min-width: 600px) {
-
-    h2 {
-        font-size: 3vw;  
-    }
-    
-    .logoSection p {
-       
-        font-size: 1.5vw;  
-    }
-
-    .logoSection img{
-        width: 23vw;  
-    }
-
-    
-
-}
-
-@media (max-width: 599px) {
-    section {
-        width: 33%;
-    }
-
-    .infoData {
-        width: 80%;
-    }
-
-    .friends {
-        font-size: 80%;
-    }
-}
-
